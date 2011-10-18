@@ -1,10 +1,10 @@
 <extension xmlns="http://ns.adobe.com/air/extension/2.5">
-	<id>com.magicalhobo.utils.PenTablet</id>
+	<id>com.rga.utils.SendInput</id>
 	<versionNumber>1.0.0</versionNumber>
 	<platforms>
 		<platform name="Windows-x86">
 			<applicationDeployment>
-				<nativeLibrary>FREPenTablet.dll</nativeLibrary>
+				<nativeLibrary>FRESendInput.dll</nativeLibrary>
 				<initializer>initializer</initializer>
 				<finalizer>finalizer</finalizer>
 			</applicationDeployment>

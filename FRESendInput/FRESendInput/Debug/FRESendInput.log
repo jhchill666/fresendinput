@@ -1,0 +1,27 @@
+﻿Build started 18/10/2011 10:59:38.
+     1>Project "C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\FRESendInput\FRESendInput.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\FRESendInput.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DLLMain.cpp FRESendInput.cpp
+         FRESendInput.cpp
+         DLLMain.cpp
+         Generating Code...
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt utils.c
+         utils.c
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\Debug\FRESendInput.dll" /NOLOGO FlashRuntimeExtensions.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\FRESendInput.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\Debug\FRESendInput.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\Debug\FRESendInput.lib" /MACHINE:X86 /DLL Debug\DLLMain.obj
+         Debug\FRESendInput.obj
+         Debug\utils.obj
+            Creating library C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\Debug\FRESendInput.lib and object C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\Debug\FRESendInput.exp
+         FRESendInput.vcxproj -> C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\Debug\FRESendInput.dll
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\Debug\FRESendInput.dll;#2" /manifest Debug\FRESendInput.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\FRESendInput.unsuccessfulbuild".
+         Touching "Debug\FRESendInput.lastbuildstate".
+     1>Done Building Project "C:\Users\fujitsu\Desktop\magicalhobo-FREPenTablet-f924079\magicalhobo-FREPenTablet-f924079\FRESendInput\FRESendInput\FRESendInput.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.37

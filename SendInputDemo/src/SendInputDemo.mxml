@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+					   xmlns:s="library://ns.adobe.com/flex/spark"
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   width="660"
+					   height="280">
+
+
+	<fx:Script>
+		<![CDATA[
+			import com.tiltdigital.utils.SendInput;
+
+			private var sendInput : SendInput;
+
+
+			protected function sendInputChar( event:MouseEvent ):void
+			{
+				sendInput = new SendInput();
+				sendInput.sendChar( "a" );
+			}
+
+
+			protected function keyboard_clickHandler(event:MouseEvent):void
+			{
+				//				_text += (event.currentTarget as Button).label;
+
+				//				editManager.setFocus();
+
+				//				input.textFlow.interactionManager = editManager;
+
+				//				var keyboardEvent:KeyboardEvent;
+
+				//				var span:SpanElement = new SpanElement();
+				//				span.text = _text;
+
+				//				var textFlow:TextFlow = new TextFlow();
+				//				textFlow.addChild( span );
+
+				//				input.textFlow.interactionManager = selectionManager;
+
+				//				input.textFlow = span;
+
+				//				
+				//				
+				//				keyboardEvent = new KeyboardEvent( KeyboardEvent.KEY_DOWN, false, false, 0xFF, 0xff  );
+
+				//				selectionManager.focusInHandler( new FocusEvent(FocusEvent.FOCUS_IN));
+				//				selectionManager.keyDownHandler( keyboardEvent );
+
+				//				input.text += _text;
+
+				//				input.setFocus();
+				//				RichEditableText(input.textDisplay).textFlow = TextFlowUtil.importFromString( input.text + _text );
+				//				
+				//				try
+				//				{
+				//					IME.setCompositionString( input.text );
+				//				}
+				//				catch( er:* ) {}			
+
+				//				
+				//				
+				//				
+				//				input.text = _text;
+
+				var button:Button, label:String;
+
+				button = ( event.currentTarget as Button );
+				label = button.label;
+
+				sendInput = new SendInput();
+				sendInput.sendChar( label.toLowerCase() );
+			}
+		]]>
+	</fx:Script>
+
+
+	<s:states>
+		<s:State name="PRIMARY"/>
+		<s:State name="SHIFTED"/>
+	</s:states>
+
+
+
+
+	<s:VGroup>
+
+
+		<s:TextInput id="input"
+					 y="36"
+					 imeMode="{IMEConversionMode.CHINESE}"
+					 width="660"
+					 height="60"
+					 textAlign="center"
+					 horizontalCenter="0"
+					 y.PRIMARY="239"
+					 horizontalCenter.PRIMARY="42"
+					 width.PRIMARY="199"
+					 height.PRIMARY="31"/>
+
+		<s:Group id="keyboard"
+				 width="661"
+				 height="184"
+				 horizontalCenter="0"
+				 y="300"
+				 focusEnabled="false">
+			<s:Button x="5"
+					  y="5"
+					  label="~"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="`"/>
+			<s:Button x="49"
+					  y="5"
+					  label="!"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="1"/>
+			<s:Button x="93"
+					  y="5"
+					  label="@"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="2"/>
+			<s:Button x="137"
+					  y="5"
+					  label="#"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="3"/>
+			<s:Button x="181"
+					  y="5"
+					  label="$"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="4"/>
+			<s:Button x="225"
+					  y="5"
+					  label="%"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="5"/>
+			<s:Button x="269"
+					  y="5"
+					  label="^"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="6"/>
+			<s:Button x="313"
+					  y="5"
+					  label="&amp;"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="7"/>
+			<s:Button x="357"
+					  y="5"
+					  label="*"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="8"/>
+			<s:Button x="401"
+					  y="5"
+					  label="("
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="9"/>
+			<s:Button x="445"
+					  y="5"
+					  label=")"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="0"/>
+			<s:Button x="489"
+					  y="5"
+					  label="_"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="-"/>
+			<s:Button x="533"
+					  y="5"
+					  label="+"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="="/>
+			<s:Button x="577"
+					  y="5"
+					  label="Backspace"
+					  height="43"
+					  width="80"
+					  fontSize="11"
+					  fontWeight="bold"/>
+			<s:Button x="5"
+					  y="48"
+					  label="Tab"
+					  height="43"
+					  width="67"
+					  fontSize="12"
+					  fontWeight="bold"/>
+			<s:Button x="72"
+					  y="48"
+					  label="Q"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="q"/>
+			<s:Button x="116"
+					  y="48"
+					  label="W"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="w"/>
+			<s:Button x="160"
+					  y="48"
+					  label="E"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="e"/>
+			<s:Button x="204"
+					  y="48"
+					  label="R"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="r"/>
+			<s:Button x="248"
+					  y="48"
+					  label="T"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="t"/>
+			<s:Button x="292"
+					  y="48"
+					  label="Y"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="y"/>
+			<s:Button x="336"
+					  y="48"
+					  label="U"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="u"/>
+			<s:Button x="380"
+					  y="48"
+					  label="I"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="i"/>
+			<s:Button x="424"
+					  y="48"
+					  label="O"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="o"/>
+			<s:Button x="468"
+					  y="48"
+					  label="P"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="p"/>
+			<s:Button x="512"
+					  y="48"
+					  label="{"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="["/>
+			<s:Button x="556"
+					  y="48"
+					  label="}"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="]"/>
+			<s:Button x="600"
+					  y="48"
+					  label="|"
+					  height="43"
+					  width="57"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="\"/>
+			<s:Button x="5"
+					  y="91"
+					  label="CapsLock"
+					  height="43"
+					  width="80"
+					  fontSize="12"
+					  fontWeight="bold"/>
+			<s:Button x="85"
+					  y="91"
+					  label="A"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="a"/>
+			<s:Button x="129"
+					  y="91"
+					  label="S"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="s"/>
+			<s:Button x="173"
+					  y="91"
+					  label="D"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="d"/>
+			<s:Button x="217"
+					  y="91"
+					  label="F"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="f"/>
+			<s:Button x="261"
+					  y="91"
+					  label="G"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="g"/>
+			<s:Button x="305"
+					  y="91"
+					  label="H"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="h"/>
+			<s:Button x="349"
+					  y="91"
+					  label="J"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="j"/>
+			<s:Button x="393"
+					  y="91"
+					  label="K"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="k"/>
+			<s:Button x="437"
+					  y="91"
+					  label="L"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="l"/>
+			<s:Button x="481"
+					  y="91"
+					  label=":"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY=";"/>
+			<s:Button x="525"
+					  y="91"
+					  label="&quot;"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="'"/>
+			<s:Button x="569"
+					  y="91"
+					  label="Enter"
+					  height="43"
+					  width="88"
+					  fontSize="24"
+					  fontWeight="bold"/>
+			<s:Button x="5"
+					  y="134"
+					  label="Shift"
+					  height="43"
+					  width="106"
+					  fontSize="24"
+					  fontWeight="bold"/>
+			<s:Button x="111"
+					  y="134"
+					  label="Z"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="z"/>
+			<s:Button x="155"
+					  y="134"
+					  label="X"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="x"/>
+			<s:Button x="199"
+					  y="134"
+					  label="C"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="c"/>
+			<s:Button x="243"
+					  y="134"
+					  label="V"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="v"/>
+			<s:Button x="287"
+					  y="134"
+					  label="B"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="b"/>
+			<s:Button x="331"
+					  y="134"
+					  label="N"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="n"/>
+			<s:Button x="375"
+					  y="134"
+					  label="M"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="m"/>
+			<s:Button x="419"
+					  y="134"
+					  label="&lt;"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY=","/>
+			<s:Button x="463"
+					  y="134"
+					  label="&gt;"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="."/>
+			<s:Button x="507"
+					  y="134"
+					  label="?"
+					  height="43"
+					  width="44"
+					  fontSize="24"
+					  fontWeight="bold"
+					  click="keyboard_clickHandler(event)"
+					  label.PRIMARY="/"/>
+			<s:Button x="551"
+					  y="134"
+					  label="Shift"
+					  height="43"
+					  width="106"
+					  fontSize="24"
+					  fontWeight="bold"/>
+		</s:Group>
+
+	</s:VGroup>
+
+
+</s:WindowedApplication>
