@@ -1,1 +1,0 @@
-/Applications/Adobe\ Flash\ Builder\ 4.5/sdks/flex_sdk_4.5.1.21328_air3/bin/adt -certificate -cn SelfSign -ou QE -o "Tilt Digital" -c US 2048-RSA sendInput.p12 test
