@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <application xmlns="http://ns.adobe.com/air/application/3.0">
 
-	<extensions>
-		<extensionID>com.tiltdigital.utils.SendInput</extensionID>
-	</extensions>
-
 	<id>SendInputDemo</id>
 	<filename>SendInputDemo</filename>
 	<name>SendInputDemo</name>
@@ -15,7 +11,7 @@
 		<fullScreen>false</fullScreen>
 		<visible>false</visible>
 	</initialWindow>
-	
+
 	<supportedProfiles>extendedDesktop</supportedProfiles>
 
 </application>
