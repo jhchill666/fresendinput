@@ -22,46 +22,16 @@
 
 			protected function keyboard_clickHandler(event:MouseEvent):void
 			{
-				//				_text += (event.currentTarget as Button).label;
-
-				//				editManager.setFocus();
-
-				//				input.textFlow.interactionManager = editManager;
-
-				//				var keyboardEvent:KeyboardEvent;
-
-				//				var span:SpanElement = new SpanElement();
-				//				span.text = _text;
-
-				//				var textFlow:TextFlow = new TextFlow();
-				//				textFlow.addChild( span );
-
-				//				input.textFlow.interactionManager = selectionManager;
-
-				//				input.textFlow = span;
-
-				//				
-				//				
-				//				keyboardEvent = new KeyboardEvent( KeyboardEvent.KEY_DOWN, false, false, 0xFF, 0xff  );
-
-				//				selectionManager.focusInHandler( new FocusEvent(FocusEvent.FOCUS_IN));
-				//				selectionManager.keyDownHandler( keyboardEvent );
-
-				//				input.text += _text;
-
-				//				input.setFocus();
-				//				RichEditableText(input.textDisplay).textFlow = TextFlowUtil.importFromString( input.text + _text );
-				//				
-				//				try
-				//				{
-				//					IME.setCompositionString( input.text );
-				//				}
-				//				catch( er:* ) {}			
-
-				//				
-				//				
-				//				
-				//				input.text = _text;
+				input.setFocus();
+				try
+				{
+					IME.enabled = true;
+					IME.conversionMode = IMEConversionMode.CHINESE;
+				}
+				catch( error:Error )
+				{
+					trace("Unable to set conversion mode.\n" + error.message);
+				}
 
 				var button:Button, label:String;
 
